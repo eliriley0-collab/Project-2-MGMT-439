@@ -53,6 +53,12 @@ The baseline JSON now carries the approved decision; the recorded allocation and
 
 | 2026-11-21 | OpenAI Codex, GPT-6 family | Applied Elijah’s approved pilot decision, reviewed the provider’s terms, and implemented and verified a synthetic checkout path. Exact historical replay remains conditional on access to the authorized original snapshot. |
 
+## Public calculation verification
+
+From a clean checkout, install `requirements.txt` and run `python verify_published.py`. The command prints PASS or FAIL for allocations, annualized net returns and realized volatility, and the locked 90% BIL failure. It exits nonzero if any check fails. It reruns the allocation rules with the published means, covariance matrices and pretrade weights, and computes the performance metrics directly from the saved monthly portfolio values. It also checks that the locked run changed only the reserve floor, reproduced the 4.300701% maximum eligible return, and issued no allocation.
+
+This check begins with saved estimates and portfolio values. Full historical replay also rebuilds the signal, estimates, pretrade weights and monthly portfolio values from the authorized original market-data snapshot. The public check does not independently establish those inputs' market-data lineage. The two published JSON artifacts and the original prediction commit were retained. [Verification script](../verify_published.py)
+
 ## Locked Changed-Input Record
 
 Status: Original GitHub upload verified; experiment executed after verification.

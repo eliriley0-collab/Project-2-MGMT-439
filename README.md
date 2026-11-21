@@ -23,6 +23,16 @@ On Windows PowerShell, use `py -3 -m venv .venv` and `.venv\Scripts\python.exe -
 
 Use **Rebalance date** to inspect either historical decision, **Mandate compliance** for each rule, and **Scenario inputs** to stress estimates, trailing windows, transaction costs, and constraints. Apply the scenario in the sidebar. **Stress comparison** shows the default and active inputs' results and supports a JSON download. The optimized strategy stops at the first infeasible rebalance.
 
+## Verify the published historical calculations
+
+After installing the requirements, run:
+
+```sh
+python verify_published.py
+```
+
+The command prints PASS or FAIL for historical allocations, annualized net returns and realized volatility, and the locked 90% BIL scenario. A failed check exits with a nonzero status. It reruns allocation rules from saved estimates and pretrade weights, recalculates performance from saved portfolio values, and checks that the locked scenario stopped. It needs no original market data or API credentials. Full historical reproduction starts from the original market-data snapshot and follows the instructions below.
+
 ## Reproduce the analysis
 
 Run the same workflow with the distributable example:

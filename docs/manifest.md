@@ -4,9 +4,10 @@
 
 | Submission item | Link or status |
 | --- | --- |
-| GitHub repository | [Project 2 repo](https://github.com/eliriley0-collab/Project-2-MGMT-439). The original prediction is present. Final package publication is pending. |
+| GitHub repository | [Project 2 repo](https://github.com/eliriley0-collab/Project-2-MGMT-439). The application, documentation, and original prediction are published. |
 | Original AI-off prediction | [Immutable upload commit, November 21, 2026, 1:52 p.m. EST](https://github.com/eliriley0-collab/Project-2-MGMT-439/commit/d1a3f6e605eeb80da6a82fd42e6c5bf0cc79786d) |
 | Launch and setup | [README](../README.md) and [dependencies](../requirements.txt). Replace these local references with frozen GitHub links after upload. |
+| Historical calculation verification | Run `python verify_published.py` after installing requirements. This checks saved calculations without market data. [Script](../verify_published.py) |
 | Decision memo | [Local final memo](decision-memo.md). Publish to GitHub and attach the same Markdown file in Brightspace. |
 | Validation and AI use | [Local final record](validation-and-ai-use.md). Publish to GitHub and attach the same Markdown file in Brightspace. |
 | Data and outputs | [Data card](data-card.md), [historical baseline](../visible-output.json), [locked result](../locked-reserve-90-output.json). Replace local references with frozen GitHub links after upload. |
@@ -18,7 +19,7 @@
 
 ## Publication and submission checklist
 
-- [ ] Publish `README.md`, `requirements.txt`, `app.py`, `engine.py`, `verify.py`, `reproduce.py`, `.gitignore`, and `.streamlit/config.toml`.
+- [ ] Publish `README.md`, `requirements.txt`, `app.py`, `engine.py`, `verify.py`, `verify_published.py`, `reproduce.py`, `.gitignore`, and `.streamlit/config.toml`.
 - [ ] Publish `docs/decision-memo.md`, `docs/validation-and-ai-use.md`, `docs/data-card.md`, `docs/manifest.md`, `data/sources/provenance.json`, `visible-output.json`, and `locked-reserve-90-output.json`. Keep the raw vendor files and price CSV local pending permission. Keep the original prediction commit in repository history.
 - [ ] Record Video 1 with the Edition A/B comparison and one AI output personally checked by Elijah, Video 2 with the code walkthrough, and Video 3 starting with the live app and the approved committee case. Open all three with AI-use and ownership statements and the education statement.
 - [ ] Enable YouTube transcripts and attach or link `transcript-video-1.txt`, `transcript-video-2.txt`, and `transcript-video-3.txt`. Check tickers, finance terms, numbers and attribution.
