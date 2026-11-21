@@ -1,0 +1,47 @@
+[
+  {
+    "ticker": "VOO",
+    "provider": "Yahoo Finance chart API",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/VOO?period1=1630454400&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "downloaded_utc": "2026-10-22T20:48:39.642726+00:00",
+    "sha256": "169da9a17a2e8efb6898683762b2f61443332fcc1b551bde5c5c89a005af717d",
+    "field": "indicators.adjclose[0].adjclose",
+    "method": "Last available daily adjusted close per completed calendar month"
+  },
+  {
+    "ticker": "SPY",
+    "provider": "Yahoo Finance chart API",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1630454400&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "downloaded_utc": "2026-10-22T20:48:39.642726+00:00",
+    "sha256": "87f6bd2b6455b521f7c89d155d441567e18ec30af181c457ffb4619353531aff",
+    "field": "indicators.adjclose[0].adjclose",
+    "method": "Last available daily adjusted close per completed calendar month"
+  },
+  {
+    "ticker": "BND",
+    "provider": "Yahoo Finance chart API",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/BND?period1=1630454400&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "downloaded_utc": "2026-10-22T20:48:39.642726+00:00",
+    "sha256": "dab6671e0a192834b56af2bee80781b6bcd5ee6d53a2a3a22431453b4005777b",
+    "field": "indicators.adjclose[0].adjclose",
+    "method": "Last available daily adjusted close per completed calendar month"
+  },
+  {
+    "ticker": "VB",
+    "provider": "Yahoo Finance chart API",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/VB?period1=1630454400&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "downloaded_utc": "2026-10-22T20:48:39.642726+00:00",
+    "sha256": "86f2d48c04bdf9609767f5a1f44ee673ae2e3d8c5c47bb26e320aebad5866177",
+    "field": "indicators.adjclose[0].adjclose",
+    "method": "Last available daily adjusted close per completed calendar month"
+  },
+  {
+    "ticker": "BIL",
+    "provider": "Yahoo Finance chart API",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/BIL?period1=1630454400&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "downloaded_utc": "2026-10-22T20:48:39.642726+00:00",
+    "sha256": "70b213871a1d11fcaa10fcc109a9f6c02e6d1db3e8766e430c743cf614b89bc3",
+    "field": "indicators.adjclose[0].adjclose",
+    "method": "Last available daily adjusted close per completed calendar month"
+  }
+]

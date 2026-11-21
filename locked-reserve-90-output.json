@@ -1,0 +1,780 @@
+{
+  "settings": {
+    "months": 36,
+    "costs_bps": 10,
+    "reserve": 0.9,
+    "risk_multiple": 1,
+    "equity_shift": 0,
+    "shrink": 0
+  },
+  "market_data_through": "2026-09-30",
+  "snapshot_sha256": "872a190e01361c927c7e725df6f69fb8b20085e566c61a379f42592de8a97384",
+  "committee_decision": "Pending student review and approval",
+  "decisions": [
+    {
+      "date": "2024-10-31",
+      "asof": "2024-09-30",
+      "benchmark_risk": 0.12885582281008068,
+      "risk_cap": 0.12885582281008068,
+      "spy_signal": 0.09690863886597612,
+      "voo_spy_correlation": 0.9999784836886867,
+      "best_net_within_risk": 0.04300701457807299,
+      "portfolios": {
+        "Equal weight": {
+          "status": "Fail",
+          "weights": {
+            "VOO": 0.2,
+            "SPY": 0.2,
+            "BND": 0.2,
+            "VB": 0.2,
+            "BIL": 0.2
+          },
+          "prior_weights": {
+            "VOO": 0.0,
+            "SPY": 0.0,
+            "BND": 0.0,
+            "VB": 0.0,
+            "BIL": 1.0
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.2,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.2,
+              "limit": "\u2265 90.0%",
+              "pass": false
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.12099819087994722,
+              "limit": "\u2264 12.89%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.06761126628721703,
+              "limit": "\u2265 5%",
+              "pass": true
+            }
+          ],
+          "turnover": 0.8,
+          "cost_fraction": 0.0008,
+          "cost_usd": 80.0,
+          "sp500_weight": 0.4,
+          "estimated_net": 0.06761126628721703,
+          "estimated_volatility": 0.12099819087994722
+        },
+        "Inverse volatility": {
+          "status": "Fail",
+          "weights": {
+            "VOO": 0.030734205429867063,
+            "SPY": 0.030721974886069082,
+            "BND": 0.07081791311666873,
+            "VB": 0.025572580572240086,
+            "BIL": 0.8421533259951551
+          },
+          "prior_weights": {
+            "VOO": 0.0,
+            "SPY": 0.0,
+            "BND": 0.0,
+            "VB": 0.0,
+            "BIL": 1.0
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.025572580572240086,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.8421533259951551,
+              "limit": "\u2265 90.0%",
+              "pass": false
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.02187102580790652,
+              "limit": "\u2264 12.89%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.036919736710401496,
+              "limit": "\u2265 5%",
+              "pass": false
+            }
+          ],
+          "turnover": 0.15784667400484492,
+          "cost_fraction": 0.00015784667400484492,
+          "cost_usd": 15.784667400484492,
+          "sp500_weight": 0.061456180315936144,
+          "estimated_net": 0.036919736710401496,
+          "estimated_volatility": 0.02187102580790652
+        },
+        "Minimum volatility": {
+          "status": "Mandate infeasible",
+          "first_failure": "2024-10-31"
+        },
+        "60/40 benchmark": {
+          "status": "Fail",
+          "weights": {
+            "VOO": 0.0,
+            "SPY": 0.6,
+            "BND": 0.4,
+            "VB": 0.0,
+            "BIL": 0.0
+          },
+          "prior_weights": {
+            "VOO": 0.0,
+            "SPY": 0.0,
+            "BND": 0.0,
+            "VB": 0.0,
+            "BIL": 1.0
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.0,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.0,
+              "limit": "\u2265 90.0%",
+              "pass": false
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.12885582281008068,
+              "limit": "\u2264 12.89%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.07083137493024383,
+              "limit": "\u2265 5%",
+              "pass": true
+            }
+          ],
+          "turnover": 1.0,
+          "cost_fraction": 0.001,
+          "cost_usd": 100.0,
+          "sp500_weight": 0.6,
+          "estimated_net": 0.07083137493024383,
+          "estimated_volatility": 0.12885582281008068
+        }
+      },
+      "annualized_return_inputs": {
+        "VOO": 0.12796619594729666,
+        "SPY": 0.12706687783789652,
+        "BND": -0.010842121235713745,
+        "VB": 0.06445623624761906,
+        "BIL": 0.03368300679546062
+      },
+      "annualized_covariance": [
+        [
+          0.030799550421541165,
+          0.0308111488919411,
+          0.009535983406607877,
+          0.032827512916124665,
+          0.00021821241441471572
+        ],
+        [
+          0.0308111488919411,
+          0.030824078156736948,
+          0.009539576157762414,
+          0.032873163941203064,
+          0.00021754112945093329
+        ],
+        [
+          0.009535983406607877,
+          0.009539576157762414,
+          0.005800989874447835,
+          0.010648711789394765,
+          0.000155514911370249
+        ],
+        [
+          0.032827512916124665,
+          0.032873163941203064,
+          0.010648711789394765,
+          0.04448762748532168,
+          0.00020302843598346917
+        ],
+        [
+          0.00021821241441471572,
+          0.00021754112945093329,
+          0.000155514911370249,
+          0.00020302843598346917,
+          4.102097894927357e-05
+        ]
+      ]
+    },
+    {
+      "date": "2025-10-31",
+      "asof": "2025-09-30",
+      "benchmark_risk": 0.09716359913297105,
+      "risk_cap": 0.09716359913297105,
+      "spy_signal": 0.19090433370438076,
+      "voo_spy_correlation": 0.9999604685383284,
+      "best_net_within_risk": null,
+      "portfolios": {
+        "Equal weight": {
+          "status": "Fail",
+          "weights": {
+            "VOO": 0.2,
+            "SPY": 0.2,
+            "BND": 0.2,
+            "VB": 0.2,
+            "BIL": 0.2
+          },
+          "prior_weights": {
+            "VOO": 0.21576754612535423,
+            "SPY": 0.21561638568329008,
+            "BND": 0.18842488861070203,
+            "VB": 0.19494488472225696,
+            "BIL": 0.18524629485839675
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.2,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.2,
+              "limit": "\u2265 90.0%",
+              "pass": false
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.09653523735911373,
+              "limit": "\u2264 9.72%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.1455867851576078,
+              "limit": "\u2265 5%",
+              "pass": true
+            }
+          ],
+          "turnover": 0.031383931808644294,
+          "cost_fraction": 3.13839318086443e-05,
+          "cost_usd": 3.531354376650587,
+          "sp500_weight": 0.4,
+          "estimated_net": 0.1455867851576078,
+          "estimated_volatility": 0.09653523735911373
+        },
+        "Inverse volatility": {
+          "status": "Pass",
+          "weights": {
+            "VOO": 0.015283190262481563,
+            "SPY": 0.015268604285472229,
+            "BND": 0.03180526666089492,
+            "VB": 0.01062017881345761,
+            "BIL": 0.9270227599776937
+          },
+          "prior_weights": {
+            "VOO": 0.03535064115198775,
+            "SPY": 0.035311817746086445,
+            "BND": 0.07113290980980494,
+            "VB": 0.026575141296182624,
+            "BIL": 0.8316294899959383
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.01062017881345761,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.9270227599776937,
+              "limit": "\u2265 90.0%",
+              "pass": true
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.007385020784477956,
+              "limit": "\u2264 9.72%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.05314643997260404,
+              "limit": "\u2265 5%",
+              "pass": true
+            }
+          ],
+          "turnover": 0.0953932699817554,
+          "cost_fraction": 9.53932699817554e-05,
+          "cost_usd": 10.074222198435915,
+          "sp500_weight": 0.030551794547953794,
+          "estimated_net": 0.05314643997260404,
+          "estimated_volatility": 0.007385020784477956
+        },
+        "Minimum volatility": {
+          "status": "Stopped after prior failure",
+          "first_failure": "2024-10-31"
+        },
+        "60/40 benchmark": {
+          "status": "Fail",
+          "weights": {
+            "VOO": 0.0,
+            "SPY": 0.6,
+            "BND": 0.4,
+            "VB": 0.0,
+            "BIL": 0.0
+          },
+          "prior_weights": {
+            "VOO": 0.0,
+            "SPY": 0.6318744070104296,
+            "BND": 0.3681255929895703,
+            "VB": 0.0,
+            "BIL": 0.0
+          },
+          "checks": [
+            {
+              "rule": "Fully invested",
+              "value": 1.0,
+              "limit": "equals 100%",
+              "pass": true
+            },
+            {
+              "rule": "Long-only / no borrowing or shorts",
+              "value": 0.0,
+              "limit": "minimum weight \u2265 0%",
+              "pass": true
+            },
+            {
+              "rule": "Eligible instruments / no derivatives",
+              "value": 1.0,
+              "limit": "100% approved ETFs",
+              "pass": true
+            },
+            {
+              "rule": "Cash or T-bill reserve",
+              "value": 0.0,
+              "limit": "\u2265 90.0%",
+              "pass": false
+            },
+            {
+              "rule": "Five-business-day liquidity (modeled)",
+              "value": 1.0,
+              "limit": "\u2265 95%",
+              "pass": true
+            },
+            {
+              "rule": "Largest direct company issuer",
+              "value": 0.0,
+              "limit": "\u2264 10%",
+              "pass": true
+            },
+            {
+              "rule": "Annual rebalance schedule",
+              "value": 1.0,
+              "limit": "scheduled date",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annualized volatility",
+              "value": 0.09716359913297105,
+              "limit": "\u2264 9.72%",
+              "pass": true
+            },
+            {
+              "rule": "Estimated annual net return target",
+              "value": 0.1593497722630841,
+              "limit": "\u2265 5%",
+              "pass": true
+            }
+          ],
+          "turnover": 0.03187440701042968,
+          "cost_fraction": 3.187440701042968e-05,
+          "cost_usd": 3.6708055386533665,
+          "sp500_weight": 0.6,
+          "estimated_net": 0.1593497722630841,
+          "estimated_volatility": 0.09716359913297105
+        }
+      },
+      "annualized_return_inputs": {
+        "VOO": 0.23286934319022745,
+        "SPY": 0.23214963013882767,
+        "BND": 0.05024237236051869,
+        "VB": 0.16671015948592255,
+        "BIL": 0.04614219134218608
+      },
+      "annualized_covariance": [
+        [
+          0.017850069966828575,
+          0.017866415684154095,
+          0.004877681280094796,
+          0.0221320868393968,
+          -3.194002363684253e-05
+        ],
+        [
+          0.017866415684154095,
+          0.017884190318046715,
+          0.004881238228093911,
+          0.02218869384585871,
+          -3.240021007656874e-05
+        ],
+        [
+          0.004877681280094796,
+          0.004881238228093911,
+          0.004121638328067495,
+          0.006243663776161649,
+          2.3806573221125765e-06
+        ],
+        [
+          0.0221320868393968,
+          0.02218869384585871,
+          0.006243663776161649,
+          0.03696615703142179,
+          -5.312306197765789e-05
+        ],
+        [
+          -3.194002363684253e-05,
+          -3.240021007656874e-05,
+          2.3806573221125765e-06,
+          -5.312306197765789e-05,
+          4.851624364080886e-06
+        ]
+      ]
+    }
+  ],
+  "path": [
+    {
+      "date": "2024-10-31",
+      "Equal weight": 99920.0,
+      "Inverse volatility": 99984.21533259952,
+      "Minimum volatility": 100000.0,
+      "60/40 benchmark": 99900.0
+    },
+    {
+      "date": "2024-11-30",
+      "Equal weight": 104685.31334855578,
+      "Inverse volatility": 101006.03099709815,
+      "Minimum volatility": null,
+      "60/40 benchmark": 103901.31955988874
+    },
+    {
+      "date": "2024-12-31",
+      "Equal weight": 101783.86682532087,
+      "Inverse volatility": 100862.4156040056,
+      "Minimum volatility": null,
+      "60/40 benchmark": 101694.26616919404
+    },
+    {
+      "date": "2025-01-31",
+      "Equal weight": 103881.81802493992,
+      "Inverse volatility": 101474.35273114378,
+      "Minimum volatility": null,
+      "60/40 benchmark": 103596.43369994393
+    },
+    {
+      "date": "2025-02-28",
+      "Equal weight": 102814.41659032532,
+      "Inverse volatility": 101688.77660822288,
+      "Minimum volatility": null,
+      "60/40 benchmark": 103649.84493403335
+    },
+    {
+      "date": "2025-03-31",
+      "Equal weight": 99268.49363050259,
+      "Inverse volatility": 101446.11121506903,
+      "Minimum volatility": null,
+      "60/40 benchmark": 100153.30070420384
+    },
+    {
+      "date": "2025-04-30",
+      "Equal weight": 98607.8872844027,
+      "Inverse volatility": 101654.07856480112,
+      "Minimum volatility": null,
+      "60/40 benchmark": 99800.45274232344
+    },
+    {
+      "date": "2025-05-31",
+      "Equal weight": 102037.90242853381,
+      "Inverse volatility": 102428.093591497,
+      "Minimum volatility": null,
+      "60/40 benchmark": 103221.15628391612
+    },
+    {
+      "date": "2025-06-30",
+      "Equal weight": 105383.65905344981,
+      "Inverse volatility": 103261.60891058455,
+      "Minimum volatility": null,
+      "60/40 benchmark": 107051.22624708014
+    },
+    {
+      "date": "2025-07-31",
+      "Equal weight": 106800.25043943268,
+      "Inverse volatility": 103755.79617675288,
+      "Minimum volatility": null,
+      "60/40 benchmark": 108455.50011614955
+    },
+    {
+      "date": "2025-08-31",
+      "Equal weight": 108979.23916778737,
+      "Inverse volatility": 104424.76312893616,
+      "Minimum volatility": null,
+      "60/40 benchmark": 110310.99098354163
+    },
+    {
+      "date": "2025-09-30",
+      "Equal weight": 111127.54092348479,
+      "Inverse volatility": 105073.07576774951,
+      "Minimum volatility": null,
+      "60/40 benchmark": 113216.32247594194
+    },
+    {
+      "date": "2025-10-31",
+      "Equal weight": 112517.56377742966,
+      "Inverse volatility": 105597.18927094607,
+      "Minimum volatility": null,
+      "60/40 benchmark": 115160.99837410243
+    },
+    {
+      "date": "2025-11-30",
+      "Equal weight": 113141.56084839773,
+      "Inverse volatility": 105921.9667236296,
+      "Minimum volatility": null,
+      "60/40 benchmark": 115570.86904200063
+    },
+    {
+      "date": "2025-12-31",
+      "Equal weight": 113195.15748477714,
+      "Inverse volatility": 106243.96347565517,
+      "Minimum volatility": null,
+      "60/40 benchmark": 115486.99035437204
+    },
+    {
+      "date": "2026-01-31",
+      "Equal weight": 115028.00170502989,
+      "Inverse volatility": 106642.2709925007,
+      "Minimum volatility": null,
+      "60/40 benchmark": 116607.9213797817
+    },
+    {
+      "date": "2026-02-28",
+      "Equal weight": 115706.05479416321,
+      "Inverse volatility": 106964.46446044117,
+      "Minimum volatility": null,
+      "60/40 benchmark": 116741.89706971373
+    },
+    {
+      "date": "2026-03-31",
+      "Equal weight": 111855.95634830066,
+      "Inverse volatility": 106965.40732292688,
+      "Minimum volatility": null,
+      "60/40 benchmark": 112482.85410111405
+    },
+    {
+      "date": "2026-04-30",
+      "Equal weight": 118495.9038853343,
+      "Inverse volatility": 107682.64219009248,
+      "Minimum volatility": null,
+      "60/40 benchmark": 119512.76228347592
+    },
+    {
+      "date": "2026-05-31",
+      "Equal weight": 121957.00445367419,
+      "Inverse volatility": 108228.86501174516,
+      "Minimum volatility": null,
+      "60/40 benchmark": 123493.61020259098
+    },
+    {
+      "date": "2026-06-30",
+      "Equal weight": 122515.8795476798,
+      "Inverse volatility": 108521.04214139326,
+      "Minimum volatility": null,
+      "60/40 benchmark": 122825.24870282003
+    },
+    {
+      "date": "2026-07-31",
+      "Equal weight": 121593.9751225935,
+      "Inverse volatility": 108780.1979137292,
+      "Minimum volatility": null,
+      "60/40 benchmark": 122256.35485460784
+    },
+    {
+      "date": "2026-08-31",
+      "Equal weight": 123423.6570855635,
+      "Inverse volatility": 109183.61216846893,
+      "Minimum volatility": null,
+      "60/40 benchmark": 124468.5472997931
+    },
+    {
+      "date": "2026-09-30",
+      "Equal weight": 121517.38343870458,
+      "Inverse volatility": 109311.46350443887,
+      "Minimum volatility": null,
+      "60/40 benchmark": 123033.63824810613
+    }
+  ],
+  "prediction_commit": "https://github.com/eliriley0-collab/Project-2-MGMT-439/commit/d1a3f6e605eeb80da6a82fd42e6c5bf0cc79786d",
+  "prediction_commit_display_time": "2026-11-21 13:52 EST",
+  "executed_at_utc": "2026-11-21T19:06:40.284271+00:00"
+}
