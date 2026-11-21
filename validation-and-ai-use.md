@@ -1,4 +1,4 @@
-# Validation and AI use
+# Validation and AI use (LOCKED AI-OFF PREDICTION)
 
 **AI use.** OpenAI Codex assisted with implementation, calculations, validation scripts and drafting documentation.
 
