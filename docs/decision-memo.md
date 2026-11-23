@@ -1,6 +1,6 @@
 # Committee decision memo
 
-**AI use.** OpenAI Codex assisted with the application, verification and preparation of this memo.
+**AI use.** I used ChatGPT and OpenAI Codex to develop, troubleshoot and verify the application. Codex also assisted with this memo.
 
 **Ownership and purpose.** Elijah Riley owns the analysis and made the final committee decision. This project is for education and does not constitute investment advice.
 

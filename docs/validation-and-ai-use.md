@@ -39,7 +39,7 @@ A new virtual environment was created by following the README. The first install
 
 ### Final verification
 
-After the decision and reviewer-data updates, all five test groups passed with the local historical snapshot. Dependency checks reported no broken requirements. A separate source-only copy omitted the vendor CSV and five raw files. The synthetic CLI run and Streamlit interface test passed in that copy using the installed pinned dependencies. The historical suite was skipped in the source-only copy as designed. A cold run from the published GitHub repository and reviewer access confirmation remain pending.
+A fresh clone from GitHub passed dependency checks and the Streamlit HTTP check on November 21. On November 23, a fresh GitHub clone passed both dashboard tests and all three public calculation checks. The exact historical tests were skipped in the public clone because it lacks the authorized snapshot. All six tests passed locally with the snapshot, including both historical rebalance views and the infeasibility stop.
 
 The baseline JSON now carries the approved decision; the recorded allocation and performance calculations are unchanged. The locked JSON remains the frozen execution artifact. Its committee status reflects the state at execution. The subsequent approved decision is recorded below and in the memo.
 
@@ -50,8 +50,8 @@ The baseline JSON now carries the approved decision; the recorded allocation and
 | 2026-11-21 | OpenAI Codex, GPT-6 family; exact build unavailable in the interface | Compared Lab 13, Lab 15, Lab 20 and the rubric. Accepted the student's approved benchmark-relative risk cap and documented the later 5% nominal target separately from the earlier Lab 13 goal. |
 | 2026-11-21 | OpenAI Codex, GPT-6 family | Implemented the optimizer, lagged signal, cost convention and app. Checked the cost formula and overlap treatment with known-answer tests, and added a future-observation perturbation and explicit infeasibility test. Accepted the implementation for classroom review with short-window and vintage limitations. |
 | 2026-11-21 | OpenAI Codex, GPT-6 family | Drafted the committee memo and manifest. Elijah later approved a paper pilot with a 0% real-capital allocation. The student should record the AI output they personally checked for Video 1. |
-
 | 2026-11-21 | OpenAI Codex, GPT-6 family | Applied Elijah’s approved pilot decision, reviewed the provider’s terms, and implemented and verified a synthetic checkout path. Exact historical replay remains conditional on access to the authorized original snapshot. |
+| 2026-11-23 | ChatGPT and OpenAI Codex, as disclosed by Elijah in the recordings. Exact ChatGPT model unavailable. | ChatGPT and Codex assisted with development, troubleshooting and verification. Codex checked the published dashboard and proof artifacts, then corrected technical terms in the transcript exports. The saved results and AI-off prediction were retained. |
 
 ## Public calculation verification
 

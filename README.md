@@ -1,6 +1,6 @@
 # Portfolio Committee · Purdue FIN 439 Project 2
 
-**AI use.** OpenAI Codex assisted with requirements review, implementation, test development, and documentation.
+**AI use.** I used ChatGPT and OpenAI Codex for requirements review, implementation, troubleshooting, verification and documentation.
 
 **Ownership and purpose.** Elijah Riley owns the analysis and made the final committee decision. This project is for education and does not constitute investment advice.
 
@@ -55,3 +55,4 @@ python verify.py
 - [Validation and AI use](docs/validation-and-ai-use.md)
 - [Data and signal card](docs/data-card.md)
 - [Submission manifest](docs/manifest.md)
+- [Video links and corrected transcripts](docs/manifest.md#videos-and-transcripts)

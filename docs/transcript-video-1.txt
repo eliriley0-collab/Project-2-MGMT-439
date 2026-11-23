@@ -1,0 +1,16 @@
+Project 2 Part 1 MGMT 439
+https://youtu.be/9XtL1ftshcM
+
+Transcript from the local recording export, corrected for substantive terminology and file names.
+
+Yeah. Hello, I'm Eli Riley, and in this video, I'm going to briefly walk through how my Project 2 application developed and how I use AI throughout the process. So before getting started here, I do want to mention that I use ChatGPT and Codex pretty extensively to help with things like coding, troubleshooting, and verifying different parts of the application. But the investment decisions, project direction, and the final recommendation were things I was responsible for evaluating and providing.
+
+So the overall idea behind this project was to build an application that could help manage an investment portfolio while following a specific set of requirements. So we started with a hypothetical $100,000 portfolio, a seven-year investment horizon, and a goal of earning at least a 5% annual net return while keeping volatility as low as possible.
+
+Originally, I was mostly focused on whether the model could generate a reasonable portfolio allocation, but as I worked through the project, I started focusing a lot more on whether those allocations actually made sense given our constraints and what would happen if those constraints became too restrictive.
+
+So looking at our Historical results here. The optimized portfolio generated about a 5.98% annualized net return with just a 1.91% volatility. Our benchmark returned about 11.42%, but with significantly more volatility at 8.24%. So the strategy wasn't necessarily outperforming in terms of returns, but it was doing what we designed it to do, which was prioritize risk management.
+
+One of the more interesting parts of the project was an experiment where I had to make a prediction before using AI to test it. So I predicted that increasing our minimum treasury bill allocation from 5% to 90% would reduce our return potential and could make it impossible to reach the 5% target. I committed that prediction to GitHub before running the experiment. And when we actually ran the test, the model couldn't find a portfolio that satisfied all our requirements. The highest eligible estimated net return was about 4.3%, which was below our 5% target. So my concern about the return requirement was supported, but because the model stopped without constructing a portfolio, we couldn't really verify whether volatility would have decreased. I also used Codex to help verify the calculations, test the application, and make sure the results were well documented.
+
+Overall, I think the biggest takeaway from this project was understanding that portfolio management isn't always about finding the best performing investment. Sometimes the most important decision is recognizing when a strategy doesn't meet your requirements and knowing when not to invest.

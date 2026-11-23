@@ -1,27 +1,35 @@
-# Brightspace submission manifest
+# FIN 439 Project 2 Brightspace manifest
 
-**Committee decision.** PILOT the original 5% BIL reserve strategy in a 12-month paper-trading pilot with a $100,000 simulated account and quarterly monitoring. Real-capital allocation is 0% throughout. Annual rebalancing is subject to compliance review. Reassess after 12 months before considering funding. The pilot does not authorize live trading.
+**Committee decision.** Pilot the original 5% BIL reserve strategy in a 12-month paper-trading pilot with $100,000 simulated capital, quarterly monitoring and 0% real-capital allocation. Rebalance annually subject to compliance review and reassess after 12 months before considering funding. The pilot authorizes paper trading only.
 
-| Submission item | Link or status |
+## GitHub deliverables
+
+| Item | Location |
 | --- | --- |
-| GitHub repository | [Project 2 repo](https://github.com/eliriley0-collab/Project-2-MGMT-439/tree/main). The application, documentation, and original prediction are published. |
-| Original AI-off prediction | [Immutable upload commit, November 21, 2026, 1:52 p.m. EST](https://github.com/eliriley0-collab/Project-2-MGMT-439/commit/d1a3f6e605eeb80da6a82fd42e6c5bf0cc79786d) |
-| Launch and setup | [README](../README.md) and [dependencies](../requirements.txt). Replace these local references with frozen GitHub links after upload. |
-| Historical calculation verification | Run `python verify_published.py` after installing requirements. This checks saved calculations without market data. [Script](../verify_published.py) |
-| Decision memo | [Local final memo](decision-memo.md). Publish to GitHub and attach the same Markdown file in Brightspace. |
-| Validation and AI use | [Local final record](validation-and-ai-use.md). Publish to GitHub and attach the same Markdown file in Brightspace. |
-| Data and outputs | [Data card](data-card.md), [historical baseline](../visible-output.json), [locked result](../locked-reserve-90-output.json). Replace local references with frozen GitHub links after upload. |
-| Video 1 · Evolution and AI check · ≤3:00 | [Part 1 on YouTube](https://youtu.be/9XtL1ftshcM). Final title, duration, timestamp index and transcript pending. |
-| Video 2 · Code walkthrough · ≤5:00 | [Part 2 on YouTube](https://youtu.be/EpWg5cCGpkE). Final title, duration, timestamp index and transcript pending. |
-| Video 3 · Live app and committee presentation · ≤5:00 | [Part 3 on YouTube](https://youtu.be/gOQokavS3TQ). Final title, duration, timestamp index and transcript pending. |
-| Reviewer access | Final GitHub checkout and logged-out video access checks pending. |
-| Optional deployed app | No deployment submitted. |
+| Project repository | [Project 2 on GitHub](https://github.com/eliriley0-collab/Project-2-MGMT-439/tree/main) |
+| Launch, dependencies and source | [README](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/README.md), [requirements](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/requirements.txt), [Streamlit app](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/app.py), [engine](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/engine.py) |
+| Decision memo | [decision-memo.md](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/decision-memo.md) |
+| Validation and AI use | [validation-and-ai-use.md](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/validation-and-ai-use.md) |
+| Locked prediction | [Immutable November 21, 2026 commit](https://github.com/eliriley0-collab/Project-2-MGMT-439/commit/d1a3f6e605eeb80da6a82fd42e6c5bf0cc79786d) |
+| Data and executed outputs | [Data card](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/data-card.md), [historical baseline](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/visible-output.json), [locked run](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/locked-reserve-90-output.json) |
+| Public calculation check | [verify_published.py](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/verify_published.py) |
+| Optional deployment | Run Streamlit locally from the repository. |
 
-## Publication and submission checklist
+## Videos and transcripts
 
-- [ ] Publish `README.md`, `requirements.txt`, `app.py`, `engine.py`, `verify.py`, `verify_published.py`, `reproduce.py`, `.gitignore`, and `.streamlit/config.toml`.
-- [ ] Publish `docs/decision-memo.md`, `docs/validation-and-ai-use.md`, `docs/data-card.md`, `docs/manifest.md`, `data/sources/provenance.json`, `visible-output.json`, and `locked-reserve-90-output.json`. Keep the raw vendor files and price CSV local pending permission. Keep the original prediction commit in repository history.
-- [ ] Record Video 1 with the Edition A/B comparison and one AI output personally checked by Elijah, Video 2 with the code walkthrough, and Video 3 starting with the live app and the approved committee case. Open all three with AI-use and ownership statements and the education statement.
-- [ ] Enable YouTube transcripts and attach or link `transcript-video-1.txt`, `transcript-video-2.txt`, and `transcript-video-3.txt`. Check tickers, finance terms, numbers and attribution.
-- [ ] Verify reviewer access to the final GitHub files and logged-out access to each video. Follow the README from the published checkout. Add final video titles, durations, transcript links, and timestamp indices.
-- [ ] Attach the final memo, validation record and manifest in Brightspace. Verify that the memo, visible outputs, validation record and videos agree. Retain Editions A and B for your own comparison.
+All three YouTube links played in a signed-out Chrome Incognito session on November 23, 2026. Runtimes come from the linked YouTube uploads.
+
+| Video | Runtime and index | Caption and submission status |
+| --- | --- | --- |
+| [Project 2 Part 1 MGMT 439](https://youtu.be/9XtL1ftshcM) · Evolution and AI check | **3:05**. 0:00 opening and AI use, 0:58 change in focus, 1:14 historical results, 1:46 locked test, 2:36 AI-assisted verification. | Captions and YouTube transcript available. **Exceeds the 3:00 limit by 0:05.** [Corrected transcript](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/transcript-video-1.txt) |
+| [Project 2 Part 2 MGMT 439](https://youtu.be/EpWg5cCGpkE) · Code walkthrough | **4:54**. 0:00 opening and AI use, 0:22 interface, 0:47 engine, 1:43 data timing, 2:13 optimizer, 2:48 results, 3:46 locked test, 4:08 public verification. | Captions and YouTube transcript available. Meets the 5:00 limit. [Corrected transcript](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/transcript-video-2.txt) |
+| [Project 2 Part 3 MGMT 439](https://youtu.be/gOQokavS3TQ) · Committee presentation | **5:33**. 0:00 opening. Detailed timestamps await the final upload. | **Exceeds the 5:00 limit by 0:33.** No caption track or YouTube transcript was visible during the access check. [Corrected local-recording transcript](https://github.com/eliriley0-collab/Project-2-MGMT-439/blob/main/docs/transcript-video-3.txt) |
+
+## Frozen-file checklist
+
+- [x] Repository includes launch instructions, dependencies, runnable code, a data card, and visible historical and locked outputs.
+- [x] The original prediction remains in its pre-run commit. The authorized market-data archive stays local.
+- [x] Corrected plain-text transcripts are linked above for all three current recordings.
+- [ ] Confirm compliant versions of Videos 1 and 3, verify the required education and investment-advice statement in each video opening, and verify that Video 3 opens on the running app.
+- [ ] Check the final uploads while signed out. Enable captions and YouTube transcripts and check substantive terms, tickers and figures against the corrected files.
+- [ ] Attach `decision-memo.md`, `validation-and-ai-use.md`, and this manifest in Brightspace. Attach the transcripts or use the GitHub transcript links above. Submit YouTube links for the videos. Retain Editions A and B for the student's comparison.

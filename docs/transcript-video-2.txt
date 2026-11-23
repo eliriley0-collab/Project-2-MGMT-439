@@ -1,0 +1,20 @@
+Project 2 Part 2 MGMT 439
+https://youtu.be/EpWg5cCGpkE
+
+Transcript from the local recording export, corrected for substantive terminology and file names.
+
+Hey everyone, I'm Eli Riley, and in this video, I'm going to walk through the code behind my investment management application and explain how everything works. So I use ChatGPT and Codex to help develop and debug the code, but I was responsible for defining the investment requirements, reviewing the results, and making sure the model was actually doing what I intended it to do.
+
+So starting down here with app.py, this is basically the front end of the application. I built the interface using Streamlit, which allows users to interact with the investment model without having to run Python code themselves. So the goal here was to make the portfolio allocations, performance metrics, and different investment scenarios easy to understand.
+
+Moving into engine.py, this is really where most of the investment calculations happen. The application looks at five different ETFs, VOO, SPY, BND, VB, and BIL. The objective is to find a portfolio that minimizes volatility while meeting our target of at least a 5% estimated net annual return. There are also several constraints built into the model. For example, the portfolio has to remain fully invested. We don't allow short selling, and we have a minimum allocation of BIL to maintain its liquidity. We also account for transaction costs rather than assuming we can rebalance the portfolio for free.
+
+Another important part of the code is how we handle historical data. So if you come up here, you can see that we're using adjusted prices to calculate monthly returns and the model rebalances annually in October. When it makes those decisions, it only uses information available through September. That's important because we don't want the model using future data to make investment decisions in the past.
+
+Then if we come here to the optimizer. So the optimizer is then going to evaluate different portfolio allocations and determine whether any of them satisfy our requirements. If it finds a feasible portfolio, it selects the allocation with the lowest estimated volatility. But if it can't meet the requirements, the model stops instead of forcing an allocation. And that became particularly important in our stress test.
+
+So if we come here to visible-output.json. So here we can look at the actual results. You can see that the model recommended 20% VOO and 80% BIL in October 2024. Let me just scroll to that here quick. Should be right here. Then in October 2025, it shifted to a 5% VOO and 95% BIL. If we scroll down here. See that right here. Over the historical holding period, that strategy generated approximately 5.98% annualized net return with a 1.91% realized volatility. If we come to locked-reserve-90-output.json,
+
+We also tested increasing the minimum BIL allocation to 90%, which you can see here. Under those conditions, the model could not meet our 5% return target. The highest eligible estimated net return was approximately 4.3%. So the model correctly stopped and identified the scenario as infeasible.
+
+And then finally, I want to point out verify_published.py. Come here. This script allows someone to download the repository and independently verify our published portfolio allocations, performance calculations, and stress test results. The original market data snapshot isn't publicly redistributed, so the script verifies our saved calculations rather than downloading and reconstructing the original data set. Overall, I really wanted the code to be organized in a way that was easy to follow and more importantly, easy to verify. The biggest thing for me was making sure the model wasn't just producing numbers, but was actually following our investment mandate and stopping when those requirements couldn't be satisfied.
