@@ -78,7 +78,13 @@ class Verification(TestCase):
         self.assertAlmostEqual(initial["cost_usd"], 800)
         app = AppTest.from_file("app.py").run(timeout=15)
         self.assertFalse(app.exception)
+        self.assertEqual(app.radio[0].value, "Saved historical results")
+        app.radio[0].set_value("Interactive local historical analysis").run(timeout=15)
+        self.assertFalse(app.exception)
         self.assertEqual(app.metric[0].value, "Pass")
+        self.assertEqual(app.metric[2].value, "5.53%")
+        app.selectbox[0].set_value("2024-10-31").run(timeout=15)
+        self.assertEqual(app.metric[2].value, "5.23%")
         app.slider[-1].set_value(0)
         app.button[0].click().run(timeout=15)
         self.assertFalse(app.exception)
@@ -86,6 +92,27 @@ class Verification(TestCase):
 
 
 class PublicCheckoutVerification(TestCase):
+    def test_saved_dashboard_without_vendor_inputs(self):
+        with patch.object(e, "DATA", Path("/nonexistent-fin439-snapshot")), patch(
+            "engine.evaluate", side_effect=AssertionError("Saved mode must not run the engine.")
+        ):
+            app = AppTest.from_file("app.py").run(timeout=15)
+            self.assertFalse(app.exception)
+            self.assertEqual(app.radio[0].value, "Saved historical results")
+            self.assertNotIn("Interactive local historical analysis", app.radio[0].options)
+            self.assertFalse(app.warning)
+            self.assertFalse(app.slider)
+            self.assertEqual(list(app.table[0].value["VOO"]), ["20.00%", "5.00%"])
+            self.assertEqual(list(app.table[0].value["BIL"]), ["80.00%", "95.00%"])
+            metrics = next(frame.value for frame in app.dataframe if "Annualized net" in frame.value)
+            self.assertEqual(f'{metrics.loc[e.NAMES[2], "Annualized net"]:.2%}', "5.98%")
+            self.assertEqual(f'{metrics.loc[e.NAMES[2], "Realized vol."]:.2%}', "1.91%")
+            self.assertEqual(f'{metrics.loc[e.NAMES[-1], "Annualized net"]:.2%}', "11.42%")
+            self.assertEqual(f'{metrics.loc[e.NAMES[-1], "Realized vol."]:.2%}', "8.24%")
+            self.assertIn("4.30%", app.error[0].value)
+            self.assertEqual(list(app.table[1].value["Status"]),
+                             ["Mandate infeasible", "Stopped after prior failure"])
+
     def test_demo_without_vendor_inputs(self):
         with patch.object(e, "DATA", Path("/nonexistent-fin439-snapshot")):
             data = e.load_data(allow_demo=True)
@@ -95,7 +122,12 @@ class PublicCheckoutVerification(TestCase):
             self.assertEqual(len(result["decisions"]), 2)
             app = AppTest.from_file("app.py").run(timeout=15)
             self.assertFalse(app.exception)
+            app.radio[0].set_value("Interactive synthetic demo").run(timeout=15)
+            self.assertFalse(app.exception)
             self.assertIn("Synthetic demo", app.warning[0].value)
+            selected = result["decisions"][-1]["portfolios"][e.NAMES[2]]
+            self.assertEqual(app.metric[2].value, f'{selected["estimated_net"]:.2%}')
+            self.assertIn("Stress comparison", [tab.label for tab in app.tabs])
             self.assertIn("0% real capital", app.info[0].value)
             self.assertIn("does not authorize live trading", app.info[0].value)
 

@@ -19,9 +19,9 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-On Windows PowerShell, use `py -3 -m venv .venv` and `.venv\Scripts\python.exe -m pip install -r requirements.txt`, then `.venv\Scripts\python.exe -m streamlit run app.py`. Open the local URL Streamlit prints. Installation uses PyPI. The app requires no credentials or live market calls. A clean checkout without licensed historical inputs uses an original, clearly labeled synthetic demonstration. The saved historical outputs and memo are the evidence for the decision.
+On Windows PowerShell, use `py -3 -m venv .venv` and `.venv\Scripts\python.exe -m pip install -r requirements.txt`, then `.venv\Scripts\python.exe -m streamlit run app.py`. Open the local URL Streamlit prints. Installation uses PyPI. The app requires no credentials or live market calls. The dashboard opens in **Saved historical results**. Review the October 2024 and 2025 allocations, historical performance against the benchmark, and the locked 90% BIL result. This read-only view displays the published run and needs no vendor files.
 
-Use **Rebalance date** to inspect either historical decision, **Mandate compliance** for each rule, and **Scenario inputs** to stress estimates, trailing windows, transaction costs, and constraints. Apply the scenario in the sidebar. **Stress comparison** shows the default and active inputs' results and supports a JSON download. The optimized strategy stops at the first infeasible rebalance.
+Use **Dashboard view** to choose **Interactive synthetic demo** for scenario controls using generated prices. When the authorized snapshot is in the local paths listed in the [data card](docs/data-card.md), **Interactive local historical analysis** also appears. In either interactive view, apply settings in the sidebar and use **Stress comparison** to compare and download the scenario. The optimizer stops at the first infeasible rebalance.
 
 ## Verify the published historical calculations
 
@@ -49,7 +49,7 @@ python reproduce.py > reproduced-output.json
 python verify.py
 ```
 
-[Visible executed output](visible-output.json) contains the data fingerprint, inputs, each rebalance and estimate cutoff, results and the pending committee decision. Historical CLI scenarios `short-window`, `estimates`, `cost` and `stop` can be passed to `reproduce.py --scenario` as exploratory checks.
+[Visible executed output](visible-output.json) contains the data fingerprint, inputs, each rebalance and estimate cutoff, results and the approved committee decision. Historical CLI scenarios `short-window`, `estimates`, `cost` and `stop` can be passed to `reproduce.py --scenario` as exploratory checks.
 
 - [Decision memo](docs/decision-memo.md)
 - [Validation and AI use](docs/validation-and-ai-use.md)
